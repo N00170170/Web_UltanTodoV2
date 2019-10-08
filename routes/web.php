@@ -11,8 +11,12 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/','TodoController@index')->name('todos.index');
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('todos');
 });
 Route::get('/todos','TodoController@index')->name('todos.index');
 Route::get('/todos/create','TodoController@create')->name('todos.create');
